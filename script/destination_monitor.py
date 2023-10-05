@@ -203,13 +203,13 @@ class MagnumDestinationMonitor:
                 fields.update({fname: nameset["name"]})
 
             if dest["routedPhysicalSource"]:
-                fields["s_src_name"] = dest["routedPhysicalSource"].get("name")
-                fields["s_src_id"] = dest["routedPhysicalSource"].get("id")
+                fields["s_src_name"] = dest["routedPhysicalSource"].get("name", "")
+                fields["s_src_id"] = dest["routedPhysicalSource"].get("id", "")
 
                 if dest["routedPhysicalSource"]["resolvedName"]:
                     fields["s_src_name_resolved"] = dest["routedPhysicalSource"][
                         "resolvedName"
-                    ].get("name")
+                    ].get("name", "")
                     fields["s_src_name_nameset"] = self.nameset
 
             document = {"fields": fields, "host": self.magnum, "name": "dst_mon"}
