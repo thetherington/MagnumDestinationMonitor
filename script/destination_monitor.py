@@ -287,7 +287,7 @@ def main():
     while q.lower() != "q":
         # print(len(magnum.collect()))
         for count, doc in enumerate(magnum.collect(), 1):
-            print(count, doc)
+            print(count, json.dumps(doc))
 
         q = input("Enter 'q' to quit, or just hit Enter: ")
 
