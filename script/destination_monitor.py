@@ -192,10 +192,10 @@ class MagnumDestinationMonitor:
                 "s_dest_id": dest.get("id"),
                 "s_dest_name": dest.get("name"),
                 "as_tags": dest.get("tags"),
-                "s_src_name": None,
-                "s_src_id": None,
-                "s_src_name_resolved": None,
-                "s_src_name_nameset": None,
+                "s_src_name": "",
+                "s_src_id": "",
+                "s_src_name_resolved": "",
+                "s_src_name_nameset": "",
             }
 
             for nameset in dest["namesetNames"]:
