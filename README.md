@@ -11,6 +11,10 @@ The destination collection module has teh below distinct abilities and features:
 3. Resolves the source device to a supplied nameset.
 4. High level "airport view" dashboard to show destination and source assignment.
 
+# Dashboard
+
+![dashboard](/screenshot/magnum_destination_monitor.png?raw=true)
+
 ## Minimum Requirements:
 
 -   inSITE Version 11 and service pack 2.
