@@ -67,6 +67,8 @@ class MagnumDestinationMonitor:
             resp = requests.post(
                 self.auth_url, data=self.access_token_request, verify=False, timeout=5
             )
+            resp.close()
+
             auth_data = json.loads(resp.text)
 
             if "error" in auth_data.keys():
@@ -102,6 +104,7 @@ class MagnumDestinationMonitor:
                     verify=False,
                     timeout=5,
                 )
+                resp.close()
 
                 nameset_resp = json.loads(resp.text)
 
@@ -155,6 +158,7 @@ class MagnumDestinationMonitor:
                 verify=False,
                 timeout=15,
             )
+            resp.close()
 
             resp_data = json.loads(resp.text)
 
